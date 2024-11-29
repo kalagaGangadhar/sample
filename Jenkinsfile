@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github access', url: 'https://github.com/kalagaGangadhar/Project-Management.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github access', url: 'https://github.com/kalagaGangadhar/sample.git']]])
                 sh 'pwd'
             }
         }
