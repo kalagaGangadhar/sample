@@ -6,7 +6,6 @@ resource "aws_instance" "web_instance" {
   tags = {
     Name = "Webserver"
   }
-
   provisioner "local-exec" {
     command = "echo ${aws_instance.web_instance.public_ip } >> public_ip.txt"
   }
